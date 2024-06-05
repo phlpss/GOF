@@ -5,21 +5,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SingletonTest {
-
     @Test
     public void testSingletonInstance() {
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
+        Singleton instance1 = Singleton.getInstance("Value 1");
+        Singleton instance2 = Singleton.getInstance("Value 2");
 
         // Both instances should be the same
-        assertSame(instance1, instance2);
-    }
-
-    @Test
-    public void testSingletonMessage() {
-        Singleton instance = Singleton.getInstance();
-        // We can call methods to ensure they are working, but typically we don't test console output.
-        // Instead, we focus on testing the instance behavior and state.
-        assertNotNull(instance);
+        assertSame(instance1.value, instance2.value);
     }
 }

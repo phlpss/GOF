@@ -1,20 +1,17 @@
 package main.java.creational.singleton;
 
-public class Singleton {
+public final class Singleton {
     private static Singleton instance;
+    public String value;
 
-    private Singleton() {
-        // Private constructor to prevent instantiation
+    private Singleton(String value) {
+        this.value = value;
     }
 
-    public static Singleton getInstance() {
+    public static Singleton getInstance(String value) {
         if (instance == null) {
-            instance = new Singleton();
+            instance = new Singleton(value);
         }
         return instance;
-    }
-
-    public void showMessage() {
-        System.out.println("Hello World from Singleton!");
     }
 }
