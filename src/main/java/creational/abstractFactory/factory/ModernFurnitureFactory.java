@@ -5,7 +5,7 @@ import main.java.creational.abstractFactory.product.ModernChair;
 import main.java.creational.abstractFactory.product.ModernTable;
 import main.java.creational.abstractFactory.product.Table;
 
-public class ModernAbstractFactory implements FurnitureAbstractFactory {
+public class ModernFurnitureFactory implements FurnitureAbstractFactory {
     @Override
     public Chair createChair() {
         return new ModernChair();
