@@ -1,4 +1,4 @@
-package test.java.creational.singleton;
+package test.java.creational;
 
 import main.java.creational.singleton.Singleton;
 import org.junit.Test;
